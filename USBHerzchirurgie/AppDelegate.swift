@@ -19,6 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.setApplicationId("YTw33xDCABFniF9zZsBP14xp4T7Y80XPyBq6jW6N", clientKey: "td4Ged4RewmriOz71rDfBjFDhyVYFtbpATY0U7EF")
         // Override point for customization after application launch.
+        
+        var navigationBarAppearace = UINavigationBar.appearance()
+        
+        navigationBarAppearace.tintColor = UIColor.whiteColor()
+        navigationBarAppearace.barTintColor = UIColor.redColor()
+        navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
         return true
     }
 

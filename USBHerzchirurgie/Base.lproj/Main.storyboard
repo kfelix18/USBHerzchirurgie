@@ -2,6 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJL-oq-PJH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Front Page Table View Controller-->
@@ -18,10 +21,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="TXj-kz-ggs"/>
+                    <connections>
+                        <segue destination="pr5-F5-L4m" kind="show" identifier="gotoNews" id="R5u-ac-dsr"/>
+                        <segue destination="YKA-gc-2G2" kind="show" identifier="gotoEintritte" id="S2H-h0-t21"/>
+                        <segue destination="fs1-wP-3wH" kind="show" identifier="gotoDienstplan" id="901-ff-eeq"/>
+                        <segue destination="Rfs-RK-A3Q" kind="show" identifier="gotoFAQs" id="dog-t7-YmS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWJ-uL-7eB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1640" y="55"/>
+            <point key="canvasLocation" x="798" y="64"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dmE-bS-KLG">
@@ -39,7 +48,207 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4f-mP-48n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="55"/>
+            <point key="canvasLocation" x="-668" y="91"/>
+        </scene>
+        <!--News Web View Controller-->
+        <scene sceneID="gfH-UZ-Ycj">
+            <objects>
+                <viewController id="pr5-F5-L4m" customClass="NewsWebViewController" customModule="USBHerzchirurgie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UfB-I4-3J3"/>
+                        <viewControllerLayoutGuide type="bottom" id="luy-S9-wsk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ksL-aW-Zaa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-3F-SbG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="r1B-9F-7Lr" kind="show" identifier="gotoCompose" id="5Qg-yl-cIR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRn-4V-Mny" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2606" y="-753"/>
+        </scene>
+        <!--Aufnahme Web View Controller-->
+        <scene sceneID="rA2-hK-QBX">
+            <objects>
+                <viewController id="YKA-gc-2G2" customClass="AufnahmeWebViewController" customModule="USBHerzchirurgie" customModuleProvider="target" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="bfb-4Z-wPG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                        <connections>
+                            <outlet property="delegate" destination="YKA-gc-2G2" id="g2s-NW-MfQ"/>
+                        </connections>
+                    </webView>
+                    <connections>
+                        <outlet property="myWebView" destination="bfb-4Z-wPG" id="FzA-SA-9vA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v8s-2O-pPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2606" y="-69"/>
+        </scene>
+        <!--Dienstplan Table View Controller-->
+        <scene sceneID="60k-Xp-ss5">
+            <objects>
+                <tableViewController id="fs1-wP-3wH" customClass="DienstplanTableViewController" customModule="USBHerzchirurgie" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" id="COo-Lz-qc7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dienstCell" rowHeight="88" id="qky-Hd-iUS" customClass="DienstplanTableViewCell" customModule="USBHerzchirurgie" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qky-Hd-iUS" id="cK6-6h-qj5">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRq-9L-Hco">
+                                            <rect key="frame" x="367" y="8" width="225" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="225" id="M8U-gH-3hw"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJU-jp-CuE">
+                                            <rect key="frame" x="8" y="59" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avh-MF-FFZ">
+                                            <rect key="frame" x="8" y="8" width="191" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="191" id="AN8-hZ-9I5"/>
+                                                <constraint firstAttribute="height" constant="21" id="Ni1-UD-8dR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="kJU-jp-CuE" firstAttribute="top" secondItem="avh-MF-FFZ" secondAttribute="bottom" constant="30" id="7aW-Ch-ZlD"/>
+                                        <constraint firstItem="kJU-jp-CuE" firstAttribute="trailing" secondItem="cK6-6h-qj5" secondAttribute="trailingMargin" id="H8U-mf-q6p"/>
+                                        <constraint firstItem="avh-MF-FFZ" firstAttribute="leading" secondItem="cK6-6h-qj5" secondAttribute="leadingMargin" id="J4V-0l-7Gx"/>
+                                        <constraint firstItem="HRq-9L-Hco" firstAttribute="baseline" secondItem="avh-MF-FFZ" secondAttribute="baseline" id="MY7-DS-kPp"/>
+                                        <constraint firstItem="kJU-jp-CuE" firstAttribute="leading" secondItem="avh-MF-FFZ" secondAttribute="leading" id="fKQ-9f-dk7"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="kJU-jp-CuE" secondAttribute="bottom" constant="-0.5" id="p74-iO-4TM"/>
+                                        <constraint firstItem="HRq-9L-Hco" firstAttribute="firstBaseline" secondItem="avh-MF-FFZ" secondAttribute="firstBaseline" id="rif-qA-Zdq"/>
+                                        <constraint firstItem="HRq-9L-Hco" firstAttribute="trailing" secondItem="kJU-jp-CuE" secondAttribute="trailing" id="tb0-db-h8y"/>
+                                        <constraint firstItem="avh-MF-FFZ" firstAttribute="top" secondItem="cK6-6h-qj5" secondAttribute="topMargin" id="ubm-UC-rDd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="abwesend" destination="kJU-jp-CuE" id="1Zb-Ls-Xjh"/>
+                                    <outlet property="dateLabel" destination="HRq-9L-Hco" id="eYo-Gb-Kng"/>
+                                    <outlet property="dienstAAundOA" destination="avh-MF-FFZ" id="BDl-GU-xZ1"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fs1-wP-3wH" id="FhS-Pq-yZX"/>
+                            <outlet property="delegate" destination="fs1-wP-3wH" id="4O0-m7-pmi"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OIP-PS-Xyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2606" y="610"/>
+        </scene>
+        <!--Web View View Controller-->
+        <scene sceneID="w1k-p4-kO1">
+            <objects>
+                <viewController id="Rfs-RK-A3Q" customClass="FAQWebViewViewController" customModule="USBHerzchirurgie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5TX-kN-8FX"/>
+                        <viewControllerLayoutGuide type="bottom" id="79g-fq-m1V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dEB-SJ-hi7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBU-ei-kum">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xBU-ei-kum" firstAttribute="leading" secondItem="dEB-SJ-hi7" secondAttribute="leading" id="9cn-pb-cBn"/>
+                            <constraint firstAttribute="trailing" secondItem="xBU-ei-kum" secondAttribute="trailing" id="g4B-aV-Q4N"/>
+                            <constraint firstItem="xBU-ei-kum" firstAttribute="bottom" secondItem="79g-fq-m1V" secondAttribute="top" id="mCp-k1-uaT"/>
+                            <constraint firstItem="xBU-ei-kum" firstAttribute="top" secondItem="dEB-SJ-hi7" secondAttribute="top" id="vdS-3T-0Of"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faqWebView" destination="xBU-ei-kum" id="jCQ-h3-lvj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anP-dE-vaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2605" y="1278"/>
+        </scene>
+        <!--Compose News View Controller-->
+        <scene sceneID="GFj-mu-A2y">
+            <objects>
+                <viewController id="r1B-9F-7Lr" customClass="ComposeNewsViewController" customModule="USBHerzchirurgie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gPc-HX-SXG"/>
+                        <viewControllerLayoutGuide type="bottom" id="4vZ-AN-rIR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g5C-VV-ZlQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="eq2-uB-SsI">
+                                <rect key="frame" x="16" y="74" width="568" height="279"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eq2-uB-SsI" secondAttribute="height" multiplier="85:46" constant="52.456521739130494" id="Nwv-1I-s2B"/>
+                                </constraints>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="140" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uz-OD-qQn">
+                                <rect key="frame" x="542" y="361" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eq2-uB-SsI" firstAttribute="leading" secondItem="g5C-VV-ZlQ" secondAttribute="leadingMargin" id="Llg-6a-b51"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eq2-uB-SsI" secondAttribute="trailing" id="bcm-xP-kn3"/>
+                            <constraint firstItem="eq2-uB-SsI" firstAttribute="top" secondItem="gPc-HX-SXG" secondAttribute="bottom" constant="8" id="oel-yX-ND4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="charRemainingLabel" destination="9uz-OD-qQn" id="d7C-Sh-Lsp"/>
+                        <outlet property="composeTextView" destination="eq2-uB-SsI" id="Ybh-LO-sBh"/>
+                        <segue destination="pr5-F5-L4m" kind="show" identifier="gobacktoNews" id="Z8M-oX-HJZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jfS-wJ-PvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3396" y="-1566"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Z8M-oX-HJZ"/>
+    </inferredMetricsTieBreakers>
 </document>

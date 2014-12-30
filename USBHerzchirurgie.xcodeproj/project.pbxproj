@@ -44,6 +44,7 @@
 		DCCD07511A534F1200B11EBB /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCD074C1A534F1200B11EBB /* ParseCrashReporting.framework */; };
 		DCCD07521A534F1200B11EBB /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCD074D1A534F1200B11EBB /* ParseFacebookUtils.framework */; };
 		DCCD07531A534F1200B11EBB /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCD074E1A534F1200B11EBB /* ParseUI.framework */; };
+		DCCD07591A53728300B11EBB /* NewsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD07581A53728300B11EBB /* NewsWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		DCCD074D1A534F1200B11EBB /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		DCCD074E1A534F1200B11EBB /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		DCCD07551A534F5400B11EBB /* USBHerzchirurgie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "USBHerzchirurgie-Bridging-Header.h"; path = "USBHerzchirurgie/USBHerzchirurgie-Bridging-Header.h"; sourceTree = "<group>"; };
+		DCCD07581A53728300B11EBB /* NewsWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsWebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				DCCD06FA1A53372600B11EBB /* ViewController.swift */,
 				DCCD07181A5339F600B11EBB /* FrontPageTableViewController.swift */,
 				DCCD071A1A533A2F00B11EBB /* NewsTableViewController.swift */,
+				DCCD07581A53728300B11EBB /* NewsWebViewController.swift */,
 				DCCD071C1A533A5300B11EBB /* DienstplanTableViewController.swift */,
 				DCCD071E1A533A8D00B11EBB /* AufnahmeWebViewController.swift */,
 				DCCD07201A533AA600B11EBB /* FAQWebViewController.swift */,
@@ -340,6 +343,7 @@
 				DCCD06FB1A53372600B11EBB /* ViewController.swift in Sources */,
 				DCCD06F91A53372600B11EBB /* USBHerzchirurgie.xcdatamodeld in Sources */,
 				DCCD07211A533AA600B11EBB /* FAQWebViewController.swift in Sources */,
+				DCCD07591A53728300B11EBB /* NewsWebViewController.swift in Sources */,
 				DCCD072B1A533B6900B11EBB /* NewsTableViewCell.swift in Sources */,
 				DCCD07191A5339F600B11EBB /* FrontPageTableViewController.swift in Sources */,
 				DCCD07231A533ACC00B11EBB /* ComposeNewsViewController.swift in Sources */,
