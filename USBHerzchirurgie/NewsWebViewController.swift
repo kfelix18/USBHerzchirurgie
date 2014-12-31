@@ -20,6 +20,8 @@ class NewsWebViewController: UIViewController {
         
         var homeButton: UIBarButtonItem =  UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Compose, target: self, action: Selector("gotoCompose"))
         self.navigationItem.rightBarButtonItem = homeButton
+        
+    
 
         // Do any additional setup after loading the view.
     }
