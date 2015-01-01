@@ -62,15 +62,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-3F-SbG">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-3F-SbG">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hfB-3F-SbG" firstAttribute="top" secondItem="ksL-aW-Zaa" secondAttribute="top" id="2qM-jV-umI"/>
+                            <constraint firstItem="hfB-3F-SbG" firstAttribute="leading" secondItem="ksL-aW-Zaa" secondAttribute="leading" id="E9L-Wd-wxB"/>
+                            <constraint firstAttribute="trailing" secondItem="hfB-3F-SbG" secondAttribute="trailing" id="XgM-9L-OTk"/>
+                            <constraint firstItem="hfB-3F-SbG" firstAttribute="bottom" secondItem="luy-S9-wsk" secondAttribute="top" id="bU6-yV-SJf"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="newsWebView" destination="hfB-3F-SbG" id="JsJ-C3-KC0"/>
                         <segue destination="r1B-9F-7Lr" kind="show" identifier="gotoCompose" id="5Qg-yl-cIR"/>
                     </connections>
                 </viewController>

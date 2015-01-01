@@ -15,7 +15,6 @@
 		DCCD07031A53372600B11EBB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCD07011A53372600B11EBB /* LaunchScreen.xib */; };
 		DCCD070F1A53372600B11EBB /* USBHerzchirurgieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD070E1A53372600B11EBB /* USBHerzchirurgieTests.swift */; };
 		DCCD07191A5339F600B11EBB /* FrontPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD07181A5339F600B11EBB /* FrontPageTableViewController.swift */; };
-		DCCD071B1A533A2F00B11EBB /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD071A1A533A2F00B11EBB /* NewsTableViewController.swift */; };
 		DCCD071D1A533A5400B11EBB /* DienstplanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD071C1A533A5300B11EBB /* DienstplanTableViewController.swift */; };
 		DCCD071F1A533A8D00B11EBB /* AufnahmeWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD071E1A533A8D00B11EBB /* AufnahmeWebViewController.swift */; };
 		DCCD07211A533AA600B11EBB /* FAQWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD07201A533AA600B11EBB /* FAQWebViewController.swift */; };
@@ -45,6 +44,7 @@
 		DCCD07521A534F1200B11EBB /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCD074D1A534F1200B11EBB /* ParseFacebookUtils.framework */; };
 		DCCD07531A534F1200B11EBB /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCD074E1A534F1200B11EBB /* ParseUI.framework */; };
 		DCCD07591A53728300B11EBB /* NewsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD07581A53728300B11EBB /* NewsWebViewController.swift */; };
+		DCEA5B3B1A54AA520054C988 /* sounds-1046-et-voila.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DCEA5B3A1A54AA520054C988 /* sounds-1046-et-voila.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +70,6 @@
 		DCCD070D1A53372600B11EBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCCD070E1A53372600B11EBB /* USBHerzchirurgieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USBHerzchirurgieTests.swift; sourceTree = "<group>"; };
 		DCCD07181A5339F600B11EBB /* FrontPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontPageTableViewController.swift; sourceTree = "<group>"; };
-		DCCD071A1A533A2F00B11EBB /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		DCCD071C1A533A5300B11EBB /* DienstplanTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DienstplanTableViewController.swift; sourceTree = "<group>"; };
 		DCCD071E1A533A8D00B11EBB /* AufnahmeWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AufnahmeWebViewController.swift; sourceTree = "<group>"; };
 		DCCD07201A533AA600B11EBB /* FAQWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQWebViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +100,7 @@
 		DCCD074E1A534F1200B11EBB /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		DCCD07551A534F5400B11EBB /* USBHerzchirurgie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "USBHerzchirurgie-Bridging-Header.h"; path = "USBHerzchirurgie/USBHerzchirurgie-Bridging-Header.h"; sourceTree = "<group>"; };
 		DCCD07581A53728300B11EBB /* NewsWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsWebViewController.swift; sourceTree = "<group>"; };
+		DCEA5B3A1A54AA520054C988 /* sounds-1046-et-voila.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sounds-1046-et-voila.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +163,6 @@
 				DCCD06F51A53372600B11EBB /* AppDelegate.swift */,
 				DCCD06FA1A53372600B11EBB /* ViewController.swift */,
 				DCCD07181A5339F600B11EBB /* FrontPageTableViewController.swift */,
-				DCCD071A1A533A2F00B11EBB /* NewsTableViewController.swift */,
 				DCCD07581A53728300B11EBB /* NewsWebViewController.swift */,
 				DCCD071C1A533A5300B11EBB /* DienstplanTableViewController.swift */,
 				DCCD071E1A533A8D00B11EBB /* AufnahmeWebViewController.swift */,
@@ -185,6 +184,7 @@
 		DCCD06F31A53372600B11EBB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DCEA5B3A1A54AA520054C988 /* sounds-1046-et-voila.mp3 */,
 				DCCD072C1A533EEF00B11EBB /* create_new-32.png */,
 				DCCD072D1A533EEF00B11EBB /* edit_file-32.png */,
 				DCCD072E1A533EEF00B11EBB /* menu-32.png */,
@@ -315,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCEA5B3B1A54AA520054C988 /* sounds-1046-et-voila.mp3 in Resources */,
 				DCCD07331A533EEF00B11EBB /* schedule.png in Resources */,
 				DCCD06FE1A53372600B11EBB /* Main.storyboard in Resources */,
 				DCCD07031A53372600B11EBB /* LaunchScreen.xib in Resources */,
@@ -349,7 +350,6 @@
 				DCCD07231A533ACC00B11EBB /* ComposeNewsViewController.swift in Sources */,
 				DCCD071F1A533A8D00B11EBB /* AufnahmeWebViewController.swift in Sources */,
 				DCCD071D1A533A5400B11EBB /* DienstplanTableViewController.swift in Sources */,
-				DCCD071B1A533A2F00B11EBB /* NewsTableViewController.swift in Sources */,
 				DCCD07291A533B5200B11EBB /* DienstplanTableViewCell.swift in Sources */,
 				DCCD06F61A53372600B11EBB /* AppDelegate.swift in Sources */,
 				DCCD07271A533B2500B11EBB /* SideBarTableViewController.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 
 class ComposeNewsViewController: UIViewController, UITextViewDelegate {
     
-    
+    var theuser = PFUser.currentUser().username as String!
     @IBOutlet weak var composeTextView: UITextView!
     
     @IBOutlet weak var charRemainingLabel: UILabel!
@@ -31,12 +31,17 @@ class ComposeNewsViewController: UIViewController, UITextViewDelegate {
         
         news.saveInBackground()
         
+//        var pushQuery:PFQuery = PFInstallation.query()
 //        var push:PFPush = PFPush()
-//        //push.setChannel("Assist")
+//        push.setChannel("Assist")
 //        var data:NSDictionary = ["alert":composeTextView.text as String!, "badge":"0", "content-available":"1","sound":""]
-//        push.setData(data)
+//        push.setMessage(composeTextView.text as String!)
 //        push.sendPushInBackground()
-//        
+        var mymessage = composeTextView.text as String! + "\n" + self.theuser
+        //var theuser = PFUser.currentUser().username as String!
+    
+        PFCloud.callFunctionInBackground("sendPushToUser", withParameters:["message": mymessage])
+        
         
         
         self.performSegueWithIdentifier("gobacktoNews", sender: self)
@@ -44,7 +49,7 @@ class ComposeNewsViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //println(user)
+        //println(theuser)
         
         var homeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: Selector("composeDone"))
         self.navigationItem.rightBarButtonItem = homeButton
