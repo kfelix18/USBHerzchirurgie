@@ -46,7 +46,7 @@ class ComposeNewsViewController: UIViewController, UITextViewDelegate {
         } else {
             
             let alertController = UIAlertController(title: "Herzchirurgie", message:
-                "Hoppla! Das war wohl nix!", preferredStyle: UIAlertControllerStyle.Alert)
+                "Hoppla! :) Das war wohl nix!", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
             
             self.presentViewController(alertController, animated: true, completion: nil)
