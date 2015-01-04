@@ -229,7 +229,7 @@ class FrontPageTableViewController: UITableViewController, SideBarDelegate {
         self.view.autoresizesSubviews = true;
         
         
-        var homeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: Selector("loadView"))
+        var homeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: Selector("viewDidLoad"))
         self.navigationItem.rightBarButtonItem = homeButton
         var logButton : UIBarButtonItem = UIBarButtonItem(image: theMenuIcon, style: UIBarButtonItemStyle.Plain, target: self, action: Selector("bringSideBar"))
         self.navigationItem.leftBarButtonItem = logButton

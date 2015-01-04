@@ -9,7 +9,7 @@
 import UIKit
 
 class ComposeNewsViewController: UIViewController, UITextViewDelegate {
-    
+    var myScheduleBtnImage = UIImage(named: "sent-32.png")
     var theuser = PFUser.currentUser().username as String!
     @IBOutlet weak var composeTextView: UITextView!
     
@@ -25,6 +25,7 @@ class ComposeNewsViewController: UIViewController, UITextViewDelegate {
         //        push.sendPushInBackground()
         //      v
         //var user:PFUser = PFUser ()
+        if ((self.composeTextView.text as String!) != ""){
         var news:PFObject = PFObject(className: "News")
         news["message"] = composeTextView.text as String!
         news["user"] = PFUser.currentUser().username
@@ -42,7 +43,14 @@ class ComposeNewsViewController: UIViewController, UITextViewDelegate {
     
         PFCloud.callFunctionInBackground("sendPushToUser", withParameters:["message": mymessage])
         
-        
+        } else {
+            
+            let alertController = UIAlertController(title: "Herzchirurgie", message:
+                "Hoppla! Das war wohl nix!", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
         
         self.performSegueWithIdentifier("gobacktoNews", sender: self)
     }
@@ -51,8 +59,11 @@ class ComposeNewsViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         //println(theuser)
         
-        var homeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: Selector("composeDone"))
-        self.navigationItem.rightBarButtonItem = homeButton
+//        var homeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: Selector("composeDone"))
+//        self.navigationItem.rightBarButtonItem = homeButton
+        
+        var logButton : UIBarButtonItem = UIBarButtonItem(image: myScheduleBtnImage, style: UIBarButtonItemStyle.Plain, target: self, action: Selector("composeDone"))
+        self.navigationItem.rightBarButtonItem = logButton
         
         self.automaticallyAdjustsScrollViewInsets = false
         

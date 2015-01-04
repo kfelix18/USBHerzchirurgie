@@ -54,31 +54,18 @@
         <scene sceneID="gfH-UZ-Ycj">
             <objects>
                 <viewController id="pr5-F5-L4m" customClass="NewsWebViewController" customModule="USBHerzchirurgie" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UfB-I4-3J3"/>
-                        <viewControllerLayoutGuide type="bottom" id="luy-S9-wsk"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ksL-aW-Zaa">
+                    <webView key="view" contentMode="scaleToFill" id="ayN-5z-PN4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-3F-SbG">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
-                            </webView>
-                        </subviews>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="hfB-3F-SbG" firstAttribute="top" secondItem="ksL-aW-Zaa" secondAttribute="top" id="2qM-jV-umI"/>
-                            <constraint firstItem="hfB-3F-SbG" firstAttribute="leading" secondItem="ksL-aW-Zaa" secondAttribute="leading" id="E9L-Wd-wxB"/>
-                            <constraint firstAttribute="trailing" secondItem="hfB-3F-SbG" secondAttribute="trailing" id="XgM-9L-OTk"/>
-                            <constraint firstItem="hfB-3F-SbG" firstAttribute="bottom" secondItem="luy-S9-wsk" secondAttribute="top" id="bU6-yV-SJf"/>
-                        </constraints>
-                    </view>
+                        <connections>
+                            <outlet property="delegate" destination="pr5-F5-L4m" id="TuV-U3-yvL"/>
+                        </connections>
+                    </webView>
                     <connections>
-                        <outlet property="newsWebView" destination="hfB-3F-SbG" id="JsJ-C3-KC0"/>
+                        <outlet property="newsWebView" destination="ayN-5z-PN4" id="XLR-aZ-Yle"/>
                         <segue destination="r1B-9F-7Lr" kind="show" identifier="gotoCompose" id="5Qg-yl-cIR"/>
+                        <segue destination="sX5-cr-qnK" kind="show" identifier="gotoMain" id="reY-8W-FYG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRn-4V-Mny" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -179,29 +166,16 @@
         <scene sceneID="w1k-p4-kO1">
             <objects>
                 <viewController id="Rfs-RK-A3Q" customClass="FAQWebViewViewController" customModule="USBHerzchirurgie" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5TX-kN-8FX"/>
-                        <viewControllerLayoutGuide type="bottom" id="79g-fq-m1V"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dEB-SJ-hi7">
+                    <webView key="view" contentMode="scaleToFill" id="Zbu-Ng-ADM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBU-ei-kum">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
-                        </subviews>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="xBU-ei-kum" firstAttribute="leading" secondItem="dEB-SJ-hi7" secondAttribute="leading" id="9cn-pb-cBn"/>
-                            <constraint firstAttribute="trailing" secondItem="xBU-ei-kum" secondAttribute="trailing" id="g4B-aV-Q4N"/>
-                            <constraint firstItem="xBU-ei-kum" firstAttribute="bottom" secondItem="79g-fq-m1V" secondAttribute="top" id="mCp-k1-uaT"/>
-                            <constraint firstItem="xBU-ei-kum" firstAttribute="top" secondItem="dEB-SJ-hi7" secondAttribute="top" id="vdS-3T-0Of"/>
-                        </constraints>
-                    </view>
+                        <connections>
+                            <outlet property="delegate" destination="Rfs-RK-A3Q" id="Sf6-RZ-PGg"/>
+                        </connections>
+                    </webView>
                     <connections>
-                        <outlet property="faqWebView" destination="xBU-ei-kum" id="jCQ-h3-lvj"/>
+                        <outlet property="faqWebView" destination="Zbu-Ng-ADM" id="v5U-pF-fW4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anP-dE-vaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -220,8 +194,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="eq2-uB-SsI">
-                                <rect key="frame" x="16" y="74" width="568" height="279"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="eq2-uB-SsI">
+                                <rect key="frame" x="16" y="25" width="568" height="279"/>
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eq2-uB-SsI" secondAttribute="height" multiplier="85:46" constant="52.456521739130494" id="Nwv-1I-s2B"/>
@@ -241,7 +215,7 @@
                         <constraints>
                             <constraint firstItem="eq2-uB-SsI" firstAttribute="leading" secondItem="g5C-VV-ZlQ" secondAttribute="leadingMargin" id="Llg-6a-b51"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eq2-uB-SsI" secondAttribute="trailing" id="bcm-xP-kn3"/>
-                            <constraint firstItem="eq2-uB-SsI" firstAttribute="top" secondItem="gPc-HX-SXG" secondAttribute="bottom" constant="8" id="oel-yX-ND4"/>
+                            <constraint firstItem="eq2-uB-SsI" firstAttribute="top" secondItem="gPc-HX-SXG" secondAttribute="bottom" constant="5" id="oel-yX-ND4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -257,5 +231,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Z8M-oX-HJZ"/>
+        <segue reference="reY-8W-FYG"/>
     </inferredMetricsTieBreakers>
 </document>

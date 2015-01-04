@@ -10,90 +10,101 @@ import UIKit
 
 class NewsWebViewController:UIViewController, UIWebViewDelegate  {
     
+    var newsActivityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
+
+    
+    
     @IBOutlet weak var newsWebView: UIWebView!
     
     func gotoCompose () {
         self.performSegueWithIdentifier("gotoCompose", sender: self)
     }
-
     
-    var activityIndicator1: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
-    
-    
-  
-    
-    
-    
-    var theURL = "http://herz.appiagyei.com/faqs.php"
-    
-    func loadWebPage () {
-    let theRequestURL = NSURL (string: theURL)
-    let theRequest = NSURLRequest(URL:theRequestURL!)
-    newsWebView.loadRequest(theRequest)
-    newsWebView.scalesPageToFit = true
-    
-    
+    func gotoMain () {
+        self.performSegueWithIdentifier("gotoMain", sender: self)
     }
+
     
     func clearNotifications () {
         UIApplication.sharedApplication().applicationIconBadgeNumber = 0
         UIApplication.sharedApplication().cancelAllLocalNotifications()
     }
     
-    func reFresh () {
-    self.newsWebView.reload()
+  
+    
+    
+    
+    var theURL = "http://herz.appiagyei.com/news"
+    
+    func loadWebPage () {
+        let theRequestURL = NSURL (string: theURL)
+        let theRequest = NSURLRequest(URL:theRequestURL!)
+        newsWebView.loadRequest(theRequest)
+        newsWebView.scalesPageToFit = true
+        
+        
     }
     
+    func reFresh () {
+        self.newsWebView.reload()
+    }
+    
+    
     override func viewDidLoad() {
-    super.viewDidLoad()
-    var homeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Compose, target: self, action: Selector("gotoCompose"))
-    self.navigationItem.rightBarButtonItem = homeButton
-    
+        super.viewDidLoad()
         
-    self.clearNotifications()
-    loadWebPage()
-    self.activityIndicator1.frame = CGRectMake(100, 100, 100, 100)
-    self.activityIndicator1.color = UIColor.redColor()
-    self.view.addSubview(activityIndicator1)
-    
-    // Do any additional setup after loading the view.
+        var homeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Compose, target: self, action: Selector("gotoCompose"))
+        self.navigationItem.rightBarButtonItem = homeButton
+        
+        var gotoMainBtn: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Rewind, target: self, action: Selector("gotoMain"))
+        self.navigationItem.leftBarButtonItem = gotoMainBtn
+        
+        
+        self.clearNotifications ()
+        
+        loadWebPage()
+        self.newsActivityIndicator.frame = CGRectMake(100, 100, 100, 100)
+        self.newsActivityIndicator.color = UIColor.redColor()
+        self.view.addSubview(newsActivityIndicator)
+        
+        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     // MARK: UIWebViewDelegate
     
-    func webViewDidStartLoad(myWebView: UIWebView) {
-    UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-    activityIndicator1.startAnimating()
+    func webViewDidStartLoad(newsWebView: UIWebView) {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        newsActivityIndicator.startAnimating()
     }
     
-    func webViewDidFinishLoad(myWebView: UIWebView) {
-    UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-    activityIndicator1.stopAnimating()
+    func webViewDidFinishLoad(newsWebView: UIWebView) {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        newsActivityIndicator.stopAnimating()
     }
     
     func webView(newsWebView: UIWebView, didFailLoadWithError error: NSError) {
-    // Report the error inside the web view.
-    let localizedErrorMessage = NSLocalizedString("An error occured:", comment: "")
-    
-    let errorHTML = "<!doctype html><html><body><div style=\"width: 100%%; text-align: center; font-size: 36pt;\">\(localizedErrorMessage) \(error.localizedDescription)</div></body></html>"
-    
-    newsWebView.loadHTMLString(errorHTML, baseURL: nil)
-    
-    UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        // Report the error inside the web view.
+        let localizedErrorMessage = NSLocalizedString("An error occured:", comment: "")
+        
+        let errorHTML = "<!doctype html><html><body><div style=\"width: 100%%; text-align: center; font-size: 36pt;\">\(localizedErrorMessage) \(error.localizedDescription)</div></body></html>"
+        
+        newsWebView.loadHTMLString(errorHTML, baseURL: nil)
+        
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
     }
     
     
     //    func webViewDidStartLoad(_ : UIWebView){
-    //        activityIndicator.startAnimating()
+    //        newsActivityIndicator.startAnimating()
     //    }
     //
     //    func webViewDidFinishload(_ : UIWebView){
-    //        activityIndicator.stopAnimating()
+    //        newsActivityIndicator.stopAnimating()
     //    }
     //
     /*
@@ -105,5 +116,11 @@ class NewsWebViewController:UIViewController, UIWebViewDelegate  {
     // Pass the selected object to the new view controller.
     }
     */
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        //self.reFresh()
+        self.clearNotifications ()
+    }
     
 }

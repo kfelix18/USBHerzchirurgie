@@ -22,7 +22,6 @@
 		DCCD07251A533B0500B11EBB /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD07241A533B0500B11EBB /* SideBar.swift */; };
 		DCCD07271A533B2500B11EBB /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD07261A533B2500B11EBB /* SideBarTableViewController.swift */; };
 		DCCD07291A533B5200B11EBB /* DienstplanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD07281A533B5200B11EBB /* DienstplanTableViewCell.swift */; };
-		DCCD072B1A533B6900B11EBB /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD072A1A533B6900B11EBB /* NewsTableViewCell.swift */; };
 		DCCD07301A533EEF00B11EBB /* create_new-32.png in Resources */ = {isa = PBXBuildFile; fileRef = DCCD072C1A533EEF00B11EBB /* create_new-32.png */; };
 		DCCD07311A533EEF00B11EBB /* edit_file-32.png in Resources */ = {isa = PBXBuildFile; fileRef = DCCD072D1A533EEF00B11EBB /* edit_file-32.png */; };
 		DCCD07321A533EEF00B11EBB /* menu-32.png in Resources */ = {isa = PBXBuildFile; fileRef = DCCD072E1A533EEF00B11EBB /* menu-32.png */; };
@@ -45,6 +44,7 @@
 		DCCD07531A534F1200B11EBB /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCD074E1A534F1200B11EBB /* ParseUI.framework */; };
 		DCCD07591A53728300B11EBB /* NewsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD07581A53728300B11EBB /* NewsWebViewController.swift */; };
 		DCEA5B3B1A54AA520054C988 /* sounds-1046-et-voila.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DCEA5B3A1A54AA520054C988 /* sounds-1046-et-voila.mp3 */; };
+		DCEA5B3D1A580D230054C988 /* sent-32.png in Resources */ = {isa = PBXBuildFile; fileRef = DCEA5B3C1A580D230054C988 /* sent-32.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +77,6 @@
 		DCCD07241A533B0500B11EBB /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		DCCD07261A533B2500B11EBB /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 		DCCD07281A533B5200B11EBB /* DienstplanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DienstplanTableViewCell.swift; sourceTree = "<group>"; };
-		DCCD072A1A533B6900B11EBB /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		DCCD072C1A533EEF00B11EBB /* create_new-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "create_new-32.png"; sourceTree = "<group>"; };
 		DCCD072D1A533EEF00B11EBB /* edit_file-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit_file-32.png"; sourceTree = "<group>"; };
 		DCCD072E1A533EEF00B11EBB /* menu-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-32.png"; sourceTree = "<group>"; };
@@ -101,6 +100,7 @@
 		DCCD07551A534F5400B11EBB /* USBHerzchirurgie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "USBHerzchirurgie-Bridging-Header.h"; path = "USBHerzchirurgie/USBHerzchirurgie-Bridging-Header.h"; sourceTree = "<group>"; };
 		DCCD07581A53728300B11EBB /* NewsWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsWebViewController.swift; sourceTree = "<group>"; };
 		DCEA5B3A1A54AA520054C988 /* sounds-1046-et-voila.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sounds-1046-et-voila.mp3"; sourceTree = "<group>"; };
+		DCEA5B3C1A580D230054C988 /* sent-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sent-32.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +170,6 @@
 				DCCD07221A533ACC00B11EBB /* ComposeNewsViewController.swift */,
 				DCCD07241A533B0500B11EBB /* SideBar.swift */,
 				DCCD07281A533B5200B11EBB /* DienstplanTableViewCell.swift */,
-				DCCD072A1A533B6900B11EBB /* NewsTableViewCell.swift */,
 				DCCD07261A533B2500B11EBB /* SideBarTableViewController.swift */,
 				DCCD06FC1A53372600B11EBB /* Main.storyboard */,
 				DCCD06FF1A53372600B11EBB /* Images.xcassets */,
@@ -184,6 +183,7 @@
 		DCCD06F31A53372600B11EBB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DCEA5B3C1A580D230054C988 /* sent-32.png */,
 				DCEA5B3A1A54AA520054C988 /* sounds-1046-et-voila.mp3 */,
 				DCCD072C1A533EEF00B11EBB /* create_new-32.png */,
 				DCCD072D1A533EEF00B11EBB /* edit_file-32.png */,
@@ -320,6 +320,7 @@
 				DCCD06FE1A53372600B11EBB /* Main.storyboard in Resources */,
 				DCCD07031A53372600B11EBB /* LaunchScreen.xib in Resources */,
 				DCCD07001A53372600B11EBB /* Images.xcassets in Resources */,
+				DCEA5B3D1A580D230054C988 /* sent-32.png in Resources */,
 				DCCD07311A533EEF00B11EBB /* edit_file-32.png in Resources */,
 				DCCD07301A533EEF00B11EBB /* create_new-32.png in Resources */,
 				DCCD07321A533EEF00B11EBB /* menu-32.png in Resources */,
@@ -345,7 +346,6 @@
 				DCCD06F91A53372600B11EBB /* USBHerzchirurgie.xcdatamodeld in Sources */,
 				DCCD07211A533AA600B11EBB /* FAQWebViewController.swift in Sources */,
 				DCCD07591A53728300B11EBB /* NewsWebViewController.swift in Sources */,
-				DCCD072B1A533B6900B11EBB /* NewsTableViewCell.swift in Sources */,
 				DCCD07191A5339F600B11EBB /* FrontPageTableViewController.swift in Sources */,
 				DCCD07231A533ACC00B11EBB /* ComposeNewsViewController.swift in Sources */,
 				DCCD071F1A533A8D00B11EBB /* AufnahmeWebViewController.swift in Sources */,
@@ -480,8 +480,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -489,7 +489,7 @@
 				INFOPLIST_FILE = USBHerzchirurgie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8284cced-d4e6-4358-8ed1-82ec9b263959";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "USBHerzchirurgie/USBHerzchirurgie-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -500,8 +500,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -509,7 +509,7 @@
 				INFOPLIST_FILE = USBHerzchirurgie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8284cced-d4e6-4358-8ed1-82ec9b263959";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "USBHerzchirurgie/USBHerzchirurgie-Bridging-Header.h";
 			};
 			name = Release;

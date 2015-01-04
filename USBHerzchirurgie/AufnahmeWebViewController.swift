@@ -20,7 +20,8 @@ class AufnahmeWebViewController: UIViewController, UIWebViewDelegate  {
     
     
     
-    var theURL = "http://herz.appiagyei.com/"
+    
+    var theURL = "http://herz.appiagyei.com/aufnahme"
     
     func loadWebPage () {
         let theRequestURL = NSURL (string: theURL)

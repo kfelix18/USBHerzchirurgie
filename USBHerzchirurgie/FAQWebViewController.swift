@@ -11,7 +11,7 @@ import UIKit
 
 class FAQWebViewViewController: UIViewController, UIWebViewDelegate  {
     
-    var activityIndicator1: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
+    var faqActivityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
     
     
     
@@ -21,7 +21,7 @@ class FAQWebViewViewController: UIViewController, UIWebViewDelegate  {
     
     
     
-    var theURL = "http://herz.appiagyei.com/faqs.php"
+    var theURL = "http://herz.appiagyei.com/faq"
     
     func loadWebPage () {
         let theRequestURL = NSURL (string: theURL)
@@ -36,15 +36,17 @@ class FAQWebViewViewController: UIViewController, UIWebViewDelegate  {
         self.faqWebView.reload()
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         var homeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: Selector("reFresh"))
         self.navigationItem.rightBarButtonItem = homeButton
         
         loadWebPage()
-        self.activityIndicator1.frame = CGRectMake(100, 100, 100, 100)
-        self.activityIndicator1.color = UIColor.redColor()
-        self.view.addSubview(activityIndicator1)
+        self.faqActivityIndicator.frame = CGRectMake(100, 100, 100, 100)
+        self.faqActivityIndicator.color = UIColor.redColor()
+        self.view.addSubview(faqActivityIndicator)
         
         // Do any additional setup after loading the view.
     }
@@ -56,14 +58,14 @@ class FAQWebViewViewController: UIViewController, UIWebViewDelegate  {
     
     // MARK: UIWebViewDelegate
     
-    func webViewDidStartLoad(myWebView: UIWebView) {
+    func webViewDidStartLoad(faqWebView: UIWebView) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        activityIndicator1.startAnimating()
+        faqActivityIndicator.startAnimating()
     }
     
-    func webViewDidFinishLoad(myWebView: UIWebView) {
+    func webViewDidFinishLoad(faqWebView: UIWebView) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-        activityIndicator1.stopAnimating()
+        faqActivityIndicator.stopAnimating()
     }
     
     func webView(faqWebView: UIWebView, didFailLoadWithError error: NSError) {
@@ -79,11 +81,11 @@ class FAQWebViewViewController: UIViewController, UIWebViewDelegate  {
     
     
     //    func webViewDidStartLoad(_ : UIWebView){
-    //        activityIndicator.startAnimating()
+    //        faqActivityIndicator.startAnimating()
     //    }
     //
     //    func webViewDidFinishload(_ : UIWebView){
-    //        activityIndicator.stopAnimating()
+    //        faqActivityIndicator.stopAnimating()
     //    }
     //
     /*
