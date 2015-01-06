@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCC35A561A5C51AA004A3E39 /* today-32.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC35A551A5C51AA004A3E39 /* today-32.png */; };
 		DCCD06F61A53372600B11EBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD06F51A53372600B11EBB /* AppDelegate.swift */; };
 		DCCD06F91A53372600B11EBB /* USBHerzchirurgie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCCD06F71A53372600B11EBB /* USBHerzchirurgie.xcdatamodeld */; };
 		DCCD06FB1A53372600B11EBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD06FA1A53372600B11EBB /* ViewController.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DCC35A551A5C51AA004A3E39 /* today-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "today-32.png"; sourceTree = "<group>"; };
 		DCCD06F01A53372600B11EBB /* USBHerzchirurgie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USBHerzchirurgie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCCD06F41A53372600B11EBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCCD06F51A53372600B11EBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		DCCD06F31A53372600B11EBB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DCC35A551A5C51AA004A3E39 /* today-32.png */,
 				DCEA5B3C1A580D230054C988 /* sent-32.png */,
 				DCEA5B3A1A54AA520054C988 /* sounds-1046-et-voila.mp3 */,
 				DCCD072C1A533EEF00B11EBB /* create_new-32.png */,
@@ -315,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC35A561A5C51AA004A3E39 /* today-32.png in Resources */,
 				DCEA5B3B1A54AA520054C988 /* sounds-1046-et-voila.mp3 in Resources */,
 				DCCD07331A533EEF00B11EBB /* schedule.png in Resources */,
 				DCCD06FE1A53372600B11EBB /* Main.storyboard in Resources */,

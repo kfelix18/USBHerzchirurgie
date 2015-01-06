@@ -72,9 +72,7 @@ class ComposeNewsViewController: UIViewController, UITextViewDelegate {
         // Do any additional setup after loading the view.
     }
     
-    func textView(textView: UITextView!,
-        shouldChangeTextInRange range: NSRange,
-        replacementText text: String!) -> Bool{
+    func textView(textView: UITextView!, shouldChangeTextInRange range: NSRange,replacementText text:String!) -> Bool{
             
             var newLength:Int = (textView.text as NSString).length + (text as NSString).length - range.length
             var remainingChar:Int = 140 - newLength

@@ -12,7 +12,7 @@ class NewsWebViewController:UIViewController, UIWebViewDelegate  {
     
     var newsActivityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
 
-    
+    var todaysImage = UIImage(named: "today-32.png")
     
     @IBOutlet weak var newsWebView: UIWebView!
     
@@ -56,10 +56,10 @@ class NewsWebViewController:UIViewController, UIWebViewDelegate  {
         var homeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Compose, target: self, action: Selector("gotoCompose"))
         self.navigationItem.rightBarButtonItem = homeButton
         
-        var gotoMainBtn: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Rewind, target: self, action: Selector("gotoMain"))
+        var gotoMainBtn: UIBarButtonItem = UIBarButtonItem(image: todaysImage, style: UIBarButtonItemStyle.Plain, target: self, action: Selector("gotoMain"))
         self.navigationItem.leftBarButtonItem = gotoMainBtn
         
-        
+               
         self.clearNotifications ()
         
         loadWebPage()

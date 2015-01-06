@@ -122,7 +122,7 @@ class FrontPageTableViewController: UITableViewController, SideBarDelegate {
         
         sideBar = SideBar(sourceView: self.view, menuItems: ["Mitteilungen", "Dienstplan", "FAQs", "Aufnahme"])
         sideBar.delegate = self
-        
+        self.title = "Herzchirurgie"
         //This checks if the user is logged in, if not then it shows an alert with the option to sign in or sign upo
         if ((PFUser.currentUser() == nil)){
             self.showLoginSignUp()
