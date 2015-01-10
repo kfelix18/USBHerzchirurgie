@@ -86,7 +86,7 @@ class FrontPageTableViewController: UITableViewController, SideBarDelegate {
         //println(date)
         var query1 = PFQuery(className: "Verteilungen")
         query1.whereKey("date", equalTo:date)
-        query1.cachePolicy = kPFCachePolicyNetworkElseCache
+        query1.cachePolicy = kPFCachePolicyCacheElseNetwork
         query1.findObjectsInBackgroundWithBlock {
             (thisWeek: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
